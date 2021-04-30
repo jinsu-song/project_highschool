@@ -1,0 +1,1 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/main_img_bar.php";?>

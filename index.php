@@ -10,10 +10,10 @@
         <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/header.php";?>
     </header>
     <main>
-    <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/main.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/main.php";?>
     </main>
     <footer>
-    <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/footer.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/footer.php";?>
     </footer>
 </body>
 </html>
