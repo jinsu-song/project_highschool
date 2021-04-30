@@ -5,7 +5,7 @@
 <!-- =========================================================================================================== -->
 
 <!-- 공통 css -->
-<link rel="stylesheet" href="http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/common/common.css">
+<link rel="stylesheet" href="http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/common/css/main.css">
 
 <!-- main_img_bar css -->
 <link rel="stylesheet" href="http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/common/main_img_bar/main_img_bar.css">

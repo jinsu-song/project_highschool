@@ -3,17 +3,32 @@
 <html lang="en">
 <head>
     <?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/head.php";?>
+    <?php
+        include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_create_table.php";
+
+        create_table($con,'message');
+        create_table($con,'board');
+        create_table($con,'notice_home');
+        create_table($con,'notice_highschool');
+        create_table($con,'image_board');
+        create_table($con,'image_board_ripple');
+        create_table($con,'free');
+        create_table($con,'free_ripple');
+        create_table($con,'members');
+        mysqli_close($con);
+
+    ?>
     
 </head>
-<body>
+<body onload="slide_func()">
     <header>
-        <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/header.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/header.php";?>
     </header>
-    <main>
-        <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/main.php";?>
-    </main>
+    <section>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/main.php";?>
+    </section>
     <footer>
-        <?php include $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/footer.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/footer.php";?>
     </footer>
 </body>
 </html>

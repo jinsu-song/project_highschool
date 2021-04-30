@@ -3,10 +3,10 @@
     $server_name = "localhost";
     $user_name = "root";
     $pass = "123456";
-    $db_name = "sample";
+    $db_name = "highschool_db";
 
     $con = mysqli_connect($server_name, $user_name, $pass);
-    $query = "create database if not exists sample";
+    $query = "create database if not exists highschool_db";
     // die는 쿼리에 에러가 있으면 프로그램을 멈추고 에러메세지 출력함
     // $con->query($query) : 쿼리문 실행
     $result = $con->query($query) or die($con->error);

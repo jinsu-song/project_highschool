@@ -1,0 +1,138 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: Source Sans Pro;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  padding: 15px;
+}
+
+section,
+footer,
+.main_content {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+/* =======header=======*/
+
+header {
+  display: flex;
+  height: 100px;
+  justify-content: space-evenly;
+}
+.header_group {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.header_sign_in_up {
+  margin: auto;
+}
+
+.header_logo_menu_group {
+  display: flex;
+  justify-content: center;
+}
+.header_logo {
+  width: 20%;
+}
+
+.header_logo i {
+  font-size: 25px;
+  padding: 10px auto;
+  /* margin-right: 5px; */
+}
+div.header_logo > div > span > a {
+  font-size: 20px;
+  font-weight: 600;
+  color: coral;
+}
+
+.header_menu {
+  display: flex;
+  width: 41%;
+  flex-direction: row;
+  background: chocolate;
+  border-radius: 10px;
+  padding: 5px;
+}
+.header_menu div {
+  margin: 0 12px;
+}
+
+.dropdown-content {
+  display: none;
+  min-width: 100px;
+  position: absolute;
+  margin-top: 10px;
+  background: rgb(240, 212, 88);
+  border-radius: 0 0 15px 15px;
+}
+
+.dropdown-content a {
+  margin: 0 10px;
+}
+
+.aa:hover > .dropdown-content,
+.bb:hover > .dropdown-content,
+.cc:hover > .dropdown-content,
+.dd:hover > .dropdown-content,
+.ee:hover > .dropdown-content,
+.ff:hover > .dropdown-content,
+.gg:hover > .dropdown-content {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.header_sign_in_up {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.header_sign_in_up ul {
+  display: flex;
+  align-items: center;
+}
+.header_sign_in_up ul li {
+  margin: 0 8px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.main_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  div.notice {
+    border-top: 1px solid rgb(150, 148, 148);
+    border-bottom: 1px solid rgb(150, 148, 148);
+  
+    padding: 8px;
+  }
+  div.notice_name {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer {
+    background: darkgray;
+    height: 100px;
+  }
+  .footer_content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }

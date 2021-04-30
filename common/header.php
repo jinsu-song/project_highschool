@@ -19,7 +19,7 @@
                 if(!$userid) {
                     ?>
                     <ul>
-                        <li><a href="http://<?=$_SERVER['HTTP_HOST'];?>/project_highschool/register/member_form.php">회원 가입</a> </li>
+                        <li><a href="http://<?=$_SERVER['HTTP_HOST'];?>/project_highschool/register/register_form.php">회원 가입</a> </li>
                         <li> | </li>
                         <li><a href="http://<?=$_SERVER['HTTP_HOST'];?>/project_highschool/login/login.php">로그인</a></li>
                     </ul>
@@ -49,3 +49,77 @@
                 }
                 ?>
     </div>
+
+    <div class="header_logo_menu_group">
+        
+        <div class="header_logo">
+            
+            <div>
+                <i class="fas fa-quidditch"></i>
+                <span><a href="http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/index.php">진수고등학교</a></span>
+            </div>
+        
+        </div>
+        
+        <div class="header_menu">
+
+            <div class="aa">
+                    <a href="#" class="set_menu_pos">학교소개</a>
+                    <div class="dropdown-content">
+                        <a href="#">인사말씀</a>
+                        <a href="#">학교상징</a>
+                        <a href="#">학교연혁</a>
+                    </div>
+            </div>
+                <div class="bb">
+                    <a href="#">교육계획</a>
+                    <div class="dropdown-content">
+                        <a href="#">연간학사일정</a>
+                        <a href="#">월간학사일정</a>
+                        <a href="#">교육과정편제표</a>
+                    </div>
+                </div>
+                <div class="cc">
+                    <a href="#">학교혁신</a>
+                    <div class="dropdown-content">
+                        <a href="#">학교평가</a>
+                        <a href="#">혁신학교</a>
+                    </div>
+                </div>
+                <div class="dd">
+                    <a href="#">교육과정</a>
+                    <div class="dropdown-content">
+                        <a href="#">교육과정편제표</a>
+                        <a href="#">고교학점제 안내</a>
+                    </div>
+                </div>
+                <div class="ee">
+                    <a href="#">학생활동</a>
+                    <div class="dropdown-content">
+                        <a href="#">학생생활인권규정</a>
+                        <a href="#">학교폭력신고함</a>
+                        <a href="#">학생회</a>
+                    </div>
+                </div>
+                <div class="ff">
+                    <a href="#">진로진학</a>
+                    <div class="dropdown-content">
+                        <a href="#">진로소식지</a>
+                        <a href="#">대학입시정보</a>
+                    </div>
+                </div>
+                <div class="gg">
+                    <a href="#">학부모마당</a>
+                    <div class="dropdown-content">
+                        <a href="#">학부모회</a>
+                        <a href="#">학교운영위원회</a>
+                    </div>
+                </div>
+                <div class="gg">
+                    <a href="http://<?=$_SERVER['HTTP_HOST'];?>/project_highschool/free/list.php">자유계시판</a>
+                    
+                </div>
+        </div>
+    </div>
+    
+</div>
