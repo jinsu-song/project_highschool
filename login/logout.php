@@ -1,9 +1,9 @@
 <?php
   session_start();
-  unset($_SESSION["userid"]);
-  unset($_SESSION["username"]);
-  unset($_SESSION["userlevel"]);
-  unset($_SESSION["userpoint"]);
+  unset($_SESSION["user_id"]);
+  unset($_SESSION["user_name"]);
+  unset($_SESSION["user_level"]);
+  unset($_SESSION["user_point"]);
   
   echo("
        <script>

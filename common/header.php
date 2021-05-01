@@ -2,13 +2,13 @@
     // 세션값은 로그인에서 딱 한번 주고, 로그아웃에서 해제시키다.
     // header에서 모든 페이지에 session을 start해주고 있다.
     session_start();
-    if (isset($_SESSION["userid"])) $userid = $_SESSION["userid"];
+    if (isset($_SESSION["user_id"])) $userid = $_SESSION["user_id"];
     else $userid = "";
-    if (isset($_SESSION["username"])) $username = $_SESSION["username"];
+    if (isset($_SESSION["user_name"])) $username = $_SESSION["user_name"];
     else $username = "";
-    if (isset($_SESSION["userlevel"])) $userlevel = $_SESSION["userlevel"];
+    if (isset($_SESSION["user_level"])) $userlevel = $_SESSION["user_level"];
     else $userlevel = "";
-    if (isset($_SESSION["userpoint"])) $userpoint = $_SESSION["userpoint"];
+    if (isset($_SESSION["user_point"])) $userpoint = $_SESSION["user_point"];
     else $userpoint = "";
 ?>
 <div class="header_group">

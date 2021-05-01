@@ -4,7 +4,7 @@
     $id = $_POST["id"];
     $pass = $_POST["pass"];
 
-    $sql="select * from members where id = '$id' && password='$pass'";
+    $sql="select * from members where id = '$id' && pass='$pass'";
     $result = mysqli_query($con, $sql);
 
     $num_row = mysqli_num_rows($result);
