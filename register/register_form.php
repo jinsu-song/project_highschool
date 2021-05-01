@@ -17,15 +17,17 @@
 						<table>
 							<tr>
 								<th>사용자 ID</th>
-								<td><input type="text" name="id">
-								<?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/register/exists_id.php"; ?>
-									<input type="button" value="중복 확인" onclick="isExistsId(<script>document.getElementsByName('id').value</script>)"></td>
+								<td>
+                                    <input type="text" name="id">
+									<input type="button" value="중복 확인" onclick="check_id()">
+                                </td>
 							</tr>
+
 							<tr>
 								<th>비밀번호</th>
-								<td><input type="password" name="pass">
-								</td>
+								<td><input type="password" name="pass"></td>
 							</tr>
+
 							<tr>
 								<th>비밀번호 확인</th>
 								<td colspan="2"><input type="password" name="pass_confirm"></td>
@@ -37,8 +39,7 @@
 							</tr>
 							<tr>
 								<th>E-mail</th>
-								<td><input type="text" name="email1">@<input type="text" name="email2">
-								</td>
+								<td><input type="text" name="email1">@<input type="text" name="email2"></td>
 							</tr>
 						</table>
 						<br>

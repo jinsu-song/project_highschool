@@ -59,7 +59,7 @@ function reset_form() {
 }
 
 function check_id() {
-    window.open("member_check_id.php?id=" + document.member_form.id.value,
+    window.open("exists_id.php?id=" + document.member_form.id.value,
         "IDcheck",
         "left=700,top=300,width=350,height=200,scrollbars=no,resizable=yes");
 }
