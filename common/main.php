@@ -11,6 +11,7 @@
                 <!-- more버튼 -->
                 <input type="submit" name="submit" value="more">
             </form>
+            <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php'">btn</button>
             
         </div>
         <hr>

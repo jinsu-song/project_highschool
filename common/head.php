@@ -17,7 +17,7 @@
     
 <script defer src="https://kit.fontawesome.com/0c7546bb8a.js" crossorigin="anonymous"></script>
 <script defer src="http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/common/main_img_bar/main_img_bar.js"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!-- <script defer src=""></script> -->
 
 <title>진수 고등학교</title>
