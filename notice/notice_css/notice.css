@@ -54,31 +54,31 @@
   
   
   /* ＝＝＝＝＝＝게시판 목록보기(notice_list.php)＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-  #notice_list li {
+  .notice_list li {
     padding: 10px 0;
     border-bottom: solid 1px #dddddd;
   }
-  #notice_list span {
+  .notice_list span {
     display: inline-block;
     text-align: center;
   }
-  #notice_list .col1 {
+  .col1 {
     width: 80px;
   }
-  #notice_list .col2 {
+  .col2 {
     width: 330px;
     text-align: left;
   }
-  #notice_list .col3 {
+  .col3 {
     width: 100px;
   }
-  #notice_list .col4 {
+  .col4 {
     width: 40px;
   }
-  #notice_list .col5 {
+  .col5 {
     width: 180px;
   }
-  #notice_list .col6 {
+  .col6 {
     width: 40px;
   }
   #page_num {

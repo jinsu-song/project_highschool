@@ -36,6 +36,7 @@
 			?>
 			<form name="notice_form" method="post" action="notice_insert.php" enctype="multipart/form-data">
 				<?
+				$notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
 				if($notice_Btn ==1){	// 교내 공지사항 클릭시
 					?>
 					<input style="display: none;" type="text" name="notice_Btn" value="1">

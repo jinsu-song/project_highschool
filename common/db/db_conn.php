@@ -19,13 +19,13 @@
         echo("
 			<script>
 			alert('$message');
-			history.go(-1)
+			history.go(-1);
 			</script>
 			");
     }
 
     function input_set($data){
-        $data = trim($data);    // 빈공간 없애기
+        $data = trim($data);    // 양쪽 공백 없애기
         $data = stripslashes($data);    // 슬래쉬 없애기
         $data = htmlspecialchars($data);    // 특수문자 예< > 등을 &lt; &gt; 엔티티로 바꿈
         return $data;

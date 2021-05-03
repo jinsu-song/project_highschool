@@ -19,30 +19,40 @@
 		<section>
             <?php include $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/common/main_img_bar.php"; ?>
 			<div id="notice_box">
-				<h3>
-					공지사항 > 목록
-				</h3>
-				<ul id="notice_list">
-					<li>
-						<span class="col1">번호</span>
+                <?
+                $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
+                if($notice_Btn == 1 ){
+                    ?>
+				<h3>공지사항 > 목록</h3>
+                <?
+                } else{
+                ?>
+                <h3>가정통신문 > 목록</h3>
+                <?
+                }
+                ?>
+				<ul class="notice_list">
+                    <li>
+                        <span class="col1">번호</span>
 						<span class="col2">제목</span>
 						<span class="col3">글쓴이</span>
 						<span class="col5">등록일</span>
-						<span class="col6">조회</span>
+						<!-- <span class="col6">조회</span> -->
 					</li>
 				</ul>
-
-                    <?php
+                
+                <?php
                         include_once $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/common/db/db_conn.php";
-
+                        
                         // 공지사항 page 이동
                         // GET으로 넘어온 값이 없으면 page를 1로 한다.
                         if (isset($_GET["page"]))
-                            $page = $_GET["page"];
+                        $page = $_GET["page"];
                         else
-                            $page = 1;
-
-                        $notice_Btn =isset( $_POST["notice_Btn"]) ? $_POST['notice_Btn'] :"";
+                        $page = 1;
+                        
+                        // $notice_Btn =isset( $_POST["notice_Btn"]) ? $_POST['notice_Btn'] :"";
+                        $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
 
                         
                         
@@ -85,13 +95,15 @@
                             $subject = $row["subject"];
                             $regist_day = $row["regist_day"];
                         ?>
-							<li>
-								<span class="col1"><?= $number ?></span>
-								<span class="col2"><a
-											href="notice_view.php?num=<?= $num ?>&page=<?= $page ?>"><?= $subject ?></a></span>
+
+                        <ul class="notice_list">
+                            <li>
+                                <span class="col1"><?= $number ?></span>
+								<span class="col2"><a href="notice_view.php?num=<?= $num ?>&page=<?= $page ?>"><?= $subject ?></a></span>
 								<span class="col3"><?= $name ?></span>
 								<span class="col5"><?= $regist_day ?></span>
 							</li>
+                        </ul>
                         <?php
                             $number--;  // 바로 다음 글의 number
                         }
@@ -134,22 +146,26 @@
                         <?php
                             // echo("<script>alert('$userid');</script>");
                             if (!empty($userid)) {
-                                ?>
-								<!-- <button onclick="location.href='notice_form.php'">글쓰기</button> -->
-                                <?
+                                $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
                                 if($notice_Btn == 1){
                                 ?>
-                                    <form action="./notice_form.php" method="post">
+                                <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_form.php?notice_Btn=<?='1'?>'">
+                                    글쓰기
+                                </button>
+                                    <!-- <form action="./notice_form.php" method="post">
                                         <input style="display: none;" type="text" name="notice_Btn" value="1">
                                         <input type="submit" name="submit" value="글쓰기">
-                                    </form>
+                                    </form> -->
                                 <?
                                 } else{
                                 ?>
-                                    <form action="./notice_form.php" method="post">
+                                    <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_form.php?notice_Btn=<?='2'?>'">
+                                        글쓰기
+                                    </button>
+                                    <!-- <form action="./notice_form.php" method="post">
                                         <input style="display: none;" type="text" name="notice_Btn" value="2">
                                         <input type="submit" name="submit" value="글쓰기">
-                                    </form>
+                                    </form> -->
                                 
                                 <? } ?>
                                 

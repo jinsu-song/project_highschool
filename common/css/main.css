@@ -60,7 +60,7 @@ div.header_logo > div > span > a {
 
 .header_menu {
   display: flex;
-  width: 41%;
+  width: 50%;
   flex-direction: row;
   background: chocolate;
   border-radius: 10px;

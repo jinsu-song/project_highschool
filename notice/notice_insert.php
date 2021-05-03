@@ -25,7 +25,10 @@
     $content = $_POST["content"];
 
     // 교내 공지사항을 눌렀냐, 가정통신문을 눌렀냐
-    $notice_Btn = input_set($_POST["notice_Btn"]);
+    // $notice_Btn = input_set($_POST["notice_Btn"]);
+
+    // GET 방식으로 데이터를 가져옴
+    // $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
 
     
     // $subject = htmlspecialchars($subject, ENT_QUOTES);
@@ -35,7 +38,7 @@
     
     $regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
 
-    // $notice_Btn =isset( $_POST["notice_Btn"]) ? $_POST['notice_Btn'] :"";
+    $notice_Btn =isset( $_POST["notice_Btn"]) ? $_POST['notice_Btn'] :"";
 
     include_once $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/notice/notice_method.php";
 
@@ -56,7 +59,7 @@
     $row = mysqli_fetch_array($result);
     $new_point = $row["point"] + $point_up;
 
-    $sql = "update members set point=$new_point where id='$userid'";
+    $sql = "update members set point='$new_point' where id='$userid'";
     mysqli_query($con, $sql);
 
     mysqli_close($con);                // DB 연결 끊기
@@ -68,7 +71,6 @@
     alert('글쓰기 성공');
    </script>
     ";
-        
     }else{
         echo "
    <script>

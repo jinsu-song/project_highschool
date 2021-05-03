@@ -1,5 +1,6 @@
 <div class="slideshow">
     <div class="slideshow_slides">
+        <a href="#"><img src="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/common/img/highschool.png" alt="학교"></a>
         <a href="#"><img src="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/common/img/spring-1.jpg" alt="봄"></a>
         <a href="#"><img src="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/common/img/summer-1.jpg" alt="여름"></a>
         <a href="#"><img src="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/common/img/fall.jpg" alt="가을"></a>

@@ -1,26 +1,30 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/main_img_bar.php";?>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";?>
 <div class="main_content">
 
 	<div class="notice">
         <div class="notice_name">
             <span style="font-size:20px;font-weight:600;">교내 공지사항</span>
 
-            <form action="./notice/notice_list.php" method="post">
+            <!-- <form action="./notice/notice_list.php" method="post">
                 <input style="display: none;" type="text" name="notice_Btn" value="1">
 
-                <!-- more버튼 -->
+                more버튼
                 <input type="submit" name="submit" value="more">
-            </form>
-            <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php'">btn</button>
+            </form> -->
+            <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php?notice_Btn=<?='1'?>'">
+                more
+            </button>
+            <!-- <a href="notice_view.php?num=<?= $num ?>&page=<?= $page ?>"><?= $subject ?></a> -->
             
         </div>
         <hr>
 		<ul>
 			<!-- 최근 게시 글 DB에서 불러오기 -->
             <?php
-	            include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";
 
-                $sql = "select * from board order by num desc limit 5";
+                $sql = "select * from notice_highschool order by num desc limit 5";
                 $result = mysqli_query($con, $sql);
 
                 if (!$result){
@@ -52,16 +56,18 @@
         <div class="notice_name">
             <span style="font-size:20px;font-weight:600;">가정통신문</span>
 
-            <form action="./notice/notice_list.php" method="post">
+            <!-- <form action="./notice/notice_list.php" method="post">
                 <input style="display: none;" type="text" name="notice_Btn" value="2">
                 <input type="submit" name="submit" value="more">
-            </form>
+            </form> -->
+            <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php?notice_Btn=<?='2'?>'">
+                more
+            </button>
 
         </div>
         <hr>
 		<ul>
             <?php
-	            include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";
 
                 $sql = "select * from notice_home order by num desc limit 5";
                 $result = mysqli_query($con, $sql);
