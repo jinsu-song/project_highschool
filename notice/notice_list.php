@@ -96,10 +96,13 @@
                             $regist_day = $row["regist_day"];
                         ?>
 
+                        <?$notice_Btn = $_GET["notice_Btn"];?>
+
                         <ul class="notice_list">
                             <li>
+                            
                                 <span class="col1"><?= $number ?></span>
-								<span class="col2"><a href="notice_view.php?num=<?= $num ?>&page=<?= $page ?>"><?= $subject ?></a></span>
+								<span class="col2"><a href="notice_view.php?num=<?= $num ?>&page=<?= $page ?>&notice_Btn=<?=$notice_Btn?>"><?= $subject ?></a></span>
 								<span class="col3"><?= $name ?></span>
 								<span class="col5"><?= $regist_day ?></span>
 							</li>
@@ -124,7 +127,7 @@
                         for ($i = 1; $i <= $total_page; $i++) {
                             if ($page == $i)     // 현재 페이지 번호 링크 안함
                             {
-                                echo "<li><b> $i </b></li>";
+                                echo "<li><b> $i  </b></li>";
                             } else {
                                 echo "<li><a href='notice_list.php?page=$i'> $i </a><li>";
                             }

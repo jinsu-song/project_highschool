@@ -13,20 +13,29 @@
 	</head>
 	<body>
 		<header>
-            <?php include  $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/header.php"; ?>
+            <?php include  $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/common/header.php"; ?>
 		</header>
 		<section>
-            <?php include $_SERVER['DOCUMENT_ROOT']."/project_highschool/main_img_bar.php"; ?>
+            <?php include $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/main_img_bar.php"; ?>
 			<div id="notice_box">
 				<h3 class="title">
 					공지사항 > 내용보기
 				</h3>
                 <?php
-                    include_once $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/db/db_connect.php";
+                    include_once $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/common/db/db_conn.php";
                     $num = $_GET["num"];
                     $page = $_GET["page"];
+					$notice_Btn = $_GET["notice_Btn"];
+					echo("<script>console.log('$notice_Btn');</script>");
+					$sql = "";
 
-                    $sql = "select * from notice_home where num=$num";
+
+					if($notice_Btn == 1){
+						$sql = "select * from notice_highschool where num=$num";
+
+					}else{
+						$sql = "select * from notice_home where num=$num";
+					}
                     $result = mysqli_query($con, $sql);
 
                     $row = mysqli_fetch_array($result);
@@ -74,7 +83,7 @@
 			</div> <!-- notice_box -->
 		</section>
 		<footer>
-            <?php include  $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/footer.php"; ?>
+            <?php include  $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/common/footer.php"; ?>
 		</footer>
 	</body>
 </html>
