@@ -15,7 +15,7 @@
         echo("
 		<script>
 		alert('게시판 글쓰기는 로그인 후 이용해 주세요!');
-		history.go(-1)
+		history.go(-1);
 		</script>    
         ");
         exit;
@@ -67,8 +67,9 @@
     if($insert_result == true){
         echo "
    <script>
-    location.href = 'notice_list.php';
+    //location.href = 'notice_list.php';
     alert('글쓰기 성공');
+    history.go(-2);
    </script>
     ";
     }else{
