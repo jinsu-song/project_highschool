@@ -15,6 +15,7 @@
         create_table($con,'free');
         create_table($con,'free_ripple');
         create_table($con,'members');
+        create_table($con,'members_delete');
         mysqli_close($con);
 
     ?>
