@@ -1,6 +1,5 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/main_img_bar.php";?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";?>
 <div class="main_content">
 
 	<div class="notice">
@@ -23,6 +22,7 @@
 		<ul>
 			<!-- 최근 게시 글 DB에서 불러오기 -->
             <?php
+            include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";
 
                 $sql = "select * from notice_highschool order by num desc limit 5";
                 $result = mysqli_query($con, $sql);
@@ -68,6 +68,7 @@
         <hr>
 		<ul>
             <?php
+            include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";
 
                 $sql = "select * from notice_home order by num desc limit 5";
                 $result = mysqli_query($con, $sql);

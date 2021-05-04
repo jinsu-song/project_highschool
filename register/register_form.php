@@ -2,6 +2,7 @@
 <html>
 	<head>
         <?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/head.php";?>
+		<link rel="stylesheet" href="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/register/register.css">
         <script src="./js/register.js"></script>
 	</head>
 	<body>

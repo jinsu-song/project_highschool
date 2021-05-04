@@ -3,6 +3,7 @@
 <head>
     <?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/head.php";?>
     <script src="http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/login/js/login.js"></script>
+    <link rel="stylesheet" href="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/login/login.css">
 </head>
 <body>
     <header>
