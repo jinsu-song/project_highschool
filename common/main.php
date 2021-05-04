@@ -7,7 +7,7 @@
             <span style="font-size:20px;font-weight:600;">교내 공지사항</span>
 
             
-            <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php?notice_Btn=<?='1'?>'">
+            <button onclick="location.href='http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/notice/notice_list.php?notice_Btn=<?='1'?>'">
                 more
             </button>
             
@@ -16,10 +16,12 @@
 		<ul>
 			<!-- 최근 게시 글 DB에서 불러오기 -->
             <?php
-            include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";
+                // include $_SERVER["DOCUMENT_ROOT"] . "/project_highschool/common/db/db_conn.php";
 
-                $sql = "select * from notice_highschool order by num desc limit 5";
+                $sql = "select * from notice_highschool order by num desc limit 5;";
                 $result = mysqli_query($con, $sql);
+                var_dump($sql);
+                // var_dump($result);
 
                 if (!$result){
 
@@ -31,12 +33,10 @@
                         $regist_day = substr($row["regist_day"], 0, 10);
                         ?>
 						<li>
-                            <a href="#">
 
                                 <span><?= $row["subject"] ?></span>
                                 <span><?= $row["name"] ?></span>
                                 <span><?= $regist_day ?></span>
-                            </a>
 						</li>
                         <?php
                     }
@@ -51,7 +51,7 @@
             <span style="font-size:20px;font-weight:600;">가정통신문</span>
 
             
-            <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php?notice_Btn=<?='2'?>'">
+            <button onclick="location.href='http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/notice/notice_list.php?notice_Btn=<?='2'?>'">
                 more
             </button>
 
@@ -59,9 +59,9 @@
         <hr>
 		<ul>
             <?php
-            include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_conn.php";
+            
 
-                $sql = "select * from notice_home order by num desc limit 5";
+                $sql = "select * from notice_home order by num desc limit 5;";
                 $result = mysqli_query($con, $sql);
 
                 if (!$result)
@@ -79,8 +79,9 @@
                     }
 
                     // 다 썼으면 connection 닫기
-                    mysqli_close($con);
+                  
                 }
+                mysqli_close($con);
             ?>
             
 		</ul>

@@ -1,10 +1,11 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/common/db/db_index.php";?>
+<?php include_once $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/db/db_conn.php";?>
+<?php include_once $_SERVER['DOCUMENT_ROOT']."./project_highschool/common/db/db_create_table.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/head.php";?>
     <?php
-        include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/db/db_create_table.php";
+        
 
         create_table($con,'message');
         create_table($con,'board');
@@ -16,7 +17,7 @@
         create_table($con,'free_ripple');
         create_table($con,'members');
         create_table($con,'members_delete');
-        mysqli_close($con);
+        // mysqli_close($con);
 
     ?>
     
