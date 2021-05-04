@@ -14,15 +14,17 @@
         </div>
         <hr>
 		<ul>
+            <li class="notice_title">
+                <p>제목&nbsp;</p>
+                <p>작성자&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>등록일</p>
+            </li>
 			<!-- 최근 게시 글 DB에서 불러오기 -->
             <?php
-                // include $_SERVER["DOCUMENT_ROOT"] . "/project_highschool/common/db/db_conn.php";
 
                 $sql = "select * from notice_highschool order by num desc limit 5;";
                 $result = mysqli_query($con, $sql);
-                var_dump($sql);
-                // var_dump($result);
-
+                
                 if (!$result){
 
                     echo "<li><span>아직 게시글이 없습니다!</span></li>";
@@ -30,13 +32,14 @@
                 else {
                     // result set 에서 첫번째 포인트 레코드를 $row라는 연관배열로 가져와라
                     while ($row = mysqli_fetch_array($result)) {
+                        $num = $row["num"];
                         $regist_day = substr($row["regist_day"], 0, 10);
                         ?>
 						<li>
 
-                                <span><?= $row["subject"] ?></span>
-                                <span><?= $row["name"] ?></span>
-                                <span><?= $regist_day ?></span>
+                                <p><?= $row["subject"] ?>&nbsp;</p>
+                                <p><?= $row["name"] ?>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                <p><?= $regist_day ?></p>
 						</li>
                         <?php
                     }
@@ -58,6 +61,11 @@
         </div>
         <hr>
 		<ul>
+            <li class="notice_title">
+                <p>제목&nbsp;</p>
+                <p>작성자&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>등록일</p>
+            </li>
             <?php
             
 
@@ -71,9 +79,9 @@
                         $regist_day = substr($row["regist_day"], 0, 10);
                         ?>
 						<li>
-							<span><?= $row["subject"] ?></span>
-							<span><?= $row["name"] ?></span>
-							<span><?= $regist_day ?></span>
+							<p><?= $row["subject"] ?></p>
+							<p><?= $row["name"] ?></p>
+							<p><?= $regist_day ?></p>
 						</li>
                         <?php
                     }

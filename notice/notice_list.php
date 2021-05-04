@@ -79,6 +79,7 @@
 
                         // 전체 글 수 - 현재 페이지의 맨 위 글 
                         $number = $total_record - $start;
+                        $notice_Btn = $_GET["notice_Btn"];
 
                         // $i < $total_record => 페이지에 보여질 개수가 scale 미만일 경우
                         for ($i = $start; $i < $start + $scale && $i < $total_record; $i++) {
@@ -95,7 +96,6 @@
                             $regist_day = $row["regist_day"];
                         ?>
 
-                        <?$notice_Btn = $_GET["notice_Btn"];?>
 
                         <ul class="notice_list">
                             <li>
