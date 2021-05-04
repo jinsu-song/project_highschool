@@ -60,15 +60,4 @@
     // DB connect close
     mysqli_close($con);
 
-    // if($insert_result === false){
-    //     alert_back("회원가입 실패");
-    // }else{
-    //     echo "
-    //           <script>
-    //                 alert('회원가입 완료');
-    //                location.href = 'http://{$_SERVER['HTTP_HOST']}/project_highschool/index.php';
-    //           </script>
-    //       ";
-    // }
-
 ?>

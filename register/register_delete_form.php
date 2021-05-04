@@ -5,12 +5,10 @@
 		<title>진수고등학교</title>
 
         <?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/head.php";?>
-		<!-- <link rel="stylesheet" type="text/css" href="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/css/main.css"> -->
 		<link rel="stylesheet" type="text/css" href="./register.css">
 
 		
 		<script src="js/member_modify.js"></script>
-		<!-- <script src="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/js/main_img_bar.js" defer></script> -->
 	</head>
 	<body>
 		<header>

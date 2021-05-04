@@ -51,7 +51,6 @@
                         else
                         $page = 1;
                         
-                        // $notice_Btn =isset( $_POST["notice_Btn"]) ? $_POST['notice_Btn'] :"";
                         $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
 
                         
@@ -155,20 +154,14 @@
                                 <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_form.php?notice_Btn=<?='1'?>'">
                                     글쓰기
                                 </button>
-                                    <!-- <form action="./notice_form.php" method="post">
-                                        <input style="display: none;" type="text" name="notice_Btn" value="1">
-                                        <input type="submit" name="submit" value="글쓰기">
-                                    </form> -->
+                                    
                                 <?
                                 } else{
                                 ?>
                                     <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_form.php?notice_Btn=<?='2'?>'">
                                         글쓰기
                                     </button>
-                                    <!-- <form action="./notice_form.php" method="post">
-                                        <input style="display: none;" type="text" name="notice_Btn" value="2">
-                                        <input type="submit" name="submit" value="글쓰기">
-                                    </form> -->
+                                    
                                 
                                 <? } ?>
                                 

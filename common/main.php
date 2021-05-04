@@ -6,16 +6,10 @@
         <div class="notice_name">
             <span style="font-size:20px;font-weight:600;">교내 공지사항</span>
 
-            <!-- <form action="./notice/notice_list.php" method="post">
-                <input style="display: none;" type="text" name="notice_Btn" value="1">
-
-                more버튼
-                <input type="submit" name="submit" value="more">
-            </form> -->
+            
             <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php?notice_Btn=<?='1'?>'">
                 more
             </button>
-            <!-- <a href="notice_view.php?num=<?= $num ?>&page=<?= $page ?>"><?= $subject ?></a> -->
             
         </div>
         <hr>
@@ -56,10 +50,7 @@
         <div class="notice_name">
             <span style="font-size:20px;font-weight:600;">가정통신문</span>
 
-            <!-- <form action="./notice/notice_list.php" method="post">
-                <input style="display: none;" type="text" name="notice_Btn" value="2">
-                <input type="submit" name="submit" value="more">
-            </form> -->
+            
             <button onclick="location.href='http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/notice/notice_list.php?notice_Btn=<?='2'?>'">
                 more
             </button>

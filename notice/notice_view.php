@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- <meta charset="utf-8"> -->
-		<!-- <title>진수 고등학교</title> -->
-		<!-- <link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['HTTP_HOST'] ?>/project_highschool/css/main.css"> -->
 		<?php include_once $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/head.php"?>
 		<link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['HTTP_HOST'] ?>/project_highschool/notice/notice_css/notice.css">
 
 		<script src="http://<?=$_SERVER['HTTP_HOST'] ?>/project_highschool/notice/js/notice.js"></script>
-		<!-- <script src="http://<?=$_SERVER["HTTP_HOST"]?>/project_highschool/js/common.js" defer></script> -->
-		<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 	</head>
 	<body>
 		<header>

@@ -21,8 +21,7 @@ function insertQueryHandler($notice_Btn, $subject, $content,$regist_day){
         
         $sql = "insert into notice_highschool (id, name, subject, content, regist_day) ";
         $sql .= "values('$userid', '$username', '$subject', '$content', '$regist_day');";
-        // $sql = "insert into notice_home (id, name, subject, content, regist_day) ";
-    // $sql .= "values('$userid', '$username', '$subject', '$content', '$regist_day');";
+        
         return $sql;
     }
     else {

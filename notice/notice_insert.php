@@ -24,15 +24,7 @@
     $subject = $_POST["subject"];
     $content = $_POST["content"];
 
-    // 교내 공지사항을 눌렀냐, 가정통신문을 눌렀냐
-    // $notice_Btn = input_set($_POST["notice_Btn"]);
-
-    // GET 방식으로 데이터를 가져옴
-    // $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
-
     
-    // $subject = htmlspecialchars($subject, ENT_QUOTES);
-    // $content = htmlspecialchars($content, ENT_QUOTES);
     $subject = input_set($subject);
     $content = input_set($content);
     
@@ -42,10 +34,6 @@
 
     include_once $_SERVER['DOCUMENT_ROOT'] . "/project_highschool/notice/notice_method.php";
 
-    // $sql = "insert into notice_home (id, name, subject, content, regist_day) ";
-    // $sql .= "values('$userid', '$username', '$subject', '$content', '$regist_day');";
-
-    
     $sql = insertQueryHandler($notice_Btn, $subject, $content,$regist_day);
 
     $insert_result = mysqli_query($con, $sql);  // $sql 에 저장된 명령 실행
@@ -81,5 +69,4 @@
     ";
     }
     
-    // alert_back("글쓰기 완료");
 ?>
