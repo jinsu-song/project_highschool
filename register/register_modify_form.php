@@ -70,7 +70,7 @@
     </section>
 
     <footer>
-        
+        <?php include $_SERVER['DOCUMENT_ROOT']."/project_highschool/common/footer.php";?>
     </footer>
 </body>
 </html>
