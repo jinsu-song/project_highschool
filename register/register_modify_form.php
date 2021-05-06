@@ -61,7 +61,7 @@
                     <br>
                     <div>
                         <input type="submit" value="수정">
-                        <input type="button" value="취소" onclick="location.href='http://<?=$_SERVER['HTTP_HOST']?>/php_practice/0420homework/index.php'">
+                        <input type="button" value="취소" onclick="location.href='http://<?=$_SERVER['HTTP_HOST']?>/project_highschool/index.php'">
                     </div>
                 </form>
             </div> <!-- join_box -->

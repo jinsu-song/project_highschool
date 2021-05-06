@@ -42,12 +42,6 @@
 
                     $content = str_replace(" ", "&nbsp;", $content);
                     $content = str_replace("\n", "<br>", $content);
-                    if ($userid !== $id) {
-                        $new_hit = $hit + 1;
-                        $sql = "update notice_home set hit=$new_hit where num=$num";
-                        mysqli_query($con, $sql);
-                    }
-
 
                 ?>
 				<ul id="view_content">
