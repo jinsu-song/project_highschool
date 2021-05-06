@@ -75,7 +75,7 @@ div.header_logo > div > span > a {
   min-width: 100px;
   position: absolute;
   margin-top: 10px;
-  background: rgb(240, 212, 88);
+  background: goldenrod;
   border-radius: 0 0 15px 15px;
 }
 

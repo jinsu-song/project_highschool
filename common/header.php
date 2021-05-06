@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <div class="gg">
-                    <a href="http://<?=$_SERVER['HTTP_HOST'];?>/project_highschool/free/list.php">자유계시판</a>
+                    <a href="http://<?=$_SERVER['HTTP_HOST'];?>/project_highschool/free/free_list.php">자유계시판</a>
                     
                 </div>
         </div>

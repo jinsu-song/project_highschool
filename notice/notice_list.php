@@ -51,7 +51,7 @@
                         else
                         $page = 1;
                         
-                        $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
+                        // $notice_Btn =isset( $_GET["notice_Btn"]) ? $_GET['notice_Btn'] :"";
 
                         
                         

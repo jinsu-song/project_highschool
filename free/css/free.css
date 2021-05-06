@@ -1,0 +1,93 @@
+section div.free_content,
+div.free_title,
+div.free_search,
+div.free_subject,
+div.free_list,
+div.free_bottom{
+    width: 800px;
+    border: 1px 0 solid black;
+    border-collapse: collapse;
+
+}
+
+section div.free_search,
+div.free_subject,
+div.free_bottom{
+    height: 36px;
+}
+
+section div.free_content{
+    display: flex;
+    flex-direction: column;
+
+}
+
+section div.free_search{
+    display: flex;
+    justify-content: space-between;
+}
+div.free_search > div{
+    width: 43%;
+}
+div.free_search_right{
+    display: flex;
+    justify-content: center;
+}
+div.free_subject{
+    background: rgb(235, 231, 231);
+}
+
+div.free_subject,
+div.free_list{
+    display: flex;
+    /* text-align: center; */
+    justify-content: space-between;
+    align-items: center;
+}
+div.free_list{
+    flex-direction: column;
+    align-content: space-between;
+}
+
+div.free_board_num_title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+div.free_board_num,
+div.free_board_title{
+    text-align: center;
+}
+
+div.free_board_num{
+    width: 10%;
+}
+
+div.free_board_title{
+    width: 55%;
+}
+
+div.free_subject ul,
+div.free_list ul{
+    display: flex;
+}
+
+.free_subject ul li,
+.free_list ul li{
+    margin: 0 10px;
+}
+/* ==================free_bottom=================== */
+div.free_bottom{
+    display: flex;
+    align-items: center;
+}
+div.free_bottom > .page_num{
+    width: 70%;
+    text-align: center;
+    margin-left: 90px;
+}
+div.free_bottom > .write_button{
+    width: 30%;
+    text-align: right;
+}
